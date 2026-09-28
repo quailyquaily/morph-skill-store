@@ -3,7 +3,7 @@
 
   python3 scripts/build_index.py            # validate and write index.json
   python3 scripts/build_index.py --check    # validate only (pull requests)
-  python3 scripts/build_index.py --check --base origin/main
+  python3 scripts/build_index.py --check --base origin/master
                                             # also require a version bump for changed skills
 
 Mister Morph reads index.json, pins each skill to `commit`, and refuses to install a skill whose

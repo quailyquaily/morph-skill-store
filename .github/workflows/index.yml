@@ -2,7 +2,7 @@ name: Build index
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - "skills/**"
       - "scripts/build_index.py"
