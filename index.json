@@ -1,6 +1,59 @@
 {
   "version": 1,
   "repo": "quailyquaily/morph-skill-store",
-  "generated_at": "",
-  "skills": []
+  "generated_at": "2026-09-28T05:37:43Z",
+  "skills": [
+    {
+      "id": "jsonbill",
+      "name": "jsonbill",
+      "version": "1.0.0",
+      "description": "Generate PDF invoices and statements from JSON with the JSONBill API.",
+      "author": "quailyquaily",
+      "license": "MIT",
+      "homepage": "https://jsonbill.com",
+      "tags": [
+        "invoices",
+        "pdf",
+        "finance"
+      ],
+      "requirements": [
+        "http_client",
+        "file_io",
+        "optional: file_send (chat)"
+      ],
+      "auth_profiles": [
+        "jsonbill"
+      ],
+      "path": "skills/jsonbill",
+      "commit": "81d78c8c2a5da2140efde7275fcec62b95501042",
+      "files": {
+        "SKILL.md": "31df9381ce50ca1bb6a4839df78d2b7bce990c517da5ffdbf1a3689b5fb97180",
+        "skill.yaml": "38f7a66729fd2d356c762ff1ca1e87b0f386c182b1fe91f886a9fd842b1e79b8"
+      },
+      "total_bytes": 4064
+    },
+    {
+      "id": "skill-author",
+      "name": "skill-author",
+      "version": "1.0.0",
+      "description": "Helps you write a new skill for Mister Morph, from the first draft of SKILL.md to a store submission.",
+      "author": "quailyquaily",
+      "license": "MIT",
+      "homepage": "https://github.com/quailyquaily/morph-skill-store",
+      "tags": [
+        "skills",
+        "writing"
+      ],
+      "requirements": [
+        "file_io"
+      ],
+      "path": "skills/skill-author",
+      "commit": "81d78c8c2a5da2140efde7275fcec62b95501042",
+      "files": {
+        "SKILL.md": "b820ba4068836920f470168ff0581a9015ddbd3d4b664124bddaa51ecc8abc10",
+        "skill.yaml": "696595e8d253c1523f9d85c6d268007bdccd1824b7948546afaa386d80855494"
+      },
+      "total_bytes": 2460
+    }
+  ]
 }
