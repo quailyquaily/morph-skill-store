@@ -1,0 +1,6 @@
+version: 1.0.0
+description: Helps you write a new skill for Mister Morph, from the first draft of SKILL.md to a store submission.
+author: quailyquaily
+license: MIT
+homepage: https://github.com/quailyquaily/morph-skill-store
+tags: [skills, writing]

@@ -1,0 +1,7 @@
+# Store metadata. The skill itself is SKILL.md; everything in this folder is installed.
+version: 1.0.0
+description: Generate PDF invoices and statements from JSON with the JSONBill API.
+author: quailyquaily
+license: MIT
+homepage: https://jsonbill.com
+tags: [invoices, pdf, finance]

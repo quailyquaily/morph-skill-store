@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/quailyquaily/morph-skill-store/schema/skill.schema.json",
+  "title": "skill.yaml",
+  "description": "Store metadata for one skill. It sits next to SKILL.md in skills/<id>/.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "author", "license"],
+  "properties": {
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+(-[0-9A-Za-z.-]+)?$", "description": "Semver. Bump it whenever any file in the skill changes." },
+    "description": { "type": "string", "maxLength": 400, "description": "One or two sentences for the store card. Defaults to the SKILL.md description." },
+    "author": { "type": "string", "minLength": 1, "description": "GitHub user or organisation." },
+    "license": { "type": "string", "minLength": 1, "description": "SPDX identifier, e.g. MIT." },
+    "homepage": { "type": "string", "pattern": "^https://" },
+    "tags": { "type": "array", "maxItems": 5, "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" } }
+  }
+}

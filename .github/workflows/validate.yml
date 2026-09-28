@@ -1,0 +1,27 @@
+name: Validate skills
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml==6.0.2
+      - name: index.json is built by CI, not by hand
+        run: |
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -qx 'index.json'; then
+            echo "::error::Do not edit index.json; it is rebuilt after merge."
+            exit 1
+          fi
+      - name: Validate
+        run: python3 scripts/build_index.py --check --base "origin/${{ github.base_ref }}"
